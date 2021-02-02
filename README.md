@@ -33,70 +33,33 @@ La aplicación permite el crear o modificar tareas (*apiejemplo/savetask),*  rec
 
 ### Logeandonos en la aplicación
 
-Para hacer login, mandamos un JSON en una petición POST, con el usuario y pass a la dirección /login:
+Para hacer login, mandamos un JSON en una petición POST, con el usuario y pass a la dirección /login.
 
-![images/Untitled.png](images/Untitled.png)
 
-Si la autentificación ha sido existosa, tendremos como respuesta:
-
-![images/Untitled%201.png](images/Untitled%201.png)
-
-El token que recibimos como respuesta, tendremos que mandarlo en la cabecera (en formato Bearer) de todas las demás peticiones.
+Si la autentificación ha sido existosa, tendremos como respuesta un token. Este token, tendremos que mandarlo en la cabecera (en formato Bearer) de todas las demás peticiones.
 
 ### Creando una nueva tarea
 
-Para crear una nueva tarea, hacemos una petición POST, con el título de la tarea y la descripción en el body de la petición y el token en la cabecera. Por defecto, cualquier tarea nueva creada se marca como no finalizada:
-
-![images/Untitled%202.png](images/Untitled%202.png)
-
-![images/Untitled%203.png](images/Untitled%203.png)
+Para crear una nueva tarea, hacemos una petición POST, con el título de la tarea y la descripción en el body de la petición y el token en la cabecera. Por defecto, cualquier tarea nueva creada se marca como no finalizada.
 
 Si la nota se ha creado correctamente, obtendremos la siguiente respuesta:
-
-![images/Untitled%204.png](images/Untitled%204.png)
 
 ### Actualizando la descripción una tarea
 
 Para modificar una nueva tarea, hacemos una petición POST, con el título de la tarea y la descripción modificada en el body de la petición y el token en la cabecera. 
 
-![images/Untitled%202.png](images/Untitled%202.png)
-
-![images/Untitled%205.png](images/Untitled%205.png)
-
-Como respusta obtendremos:
-
-![images/Untitled%206.png](images/Untitled%206.png)
 
 ### Obteniendo lista de tareas sin finalizar de un usuario
 
-Para obtener una lista de las tareas no finalizadas de un usuario, hacemos una petición GET, con el token en la cabecera. El cuerpo puede ir vacío, no hay parámetros requeridos: 
+Para obtener una lista de las tareas no finalizadas de un usuario, hacemos una petición GET, con el token en la cabecera. El cuerpo puede ir vacío, no hay parámetros requeridos.
 
-![images/Untitled%207.png](images/Untitled%207.png)
-
-Como respuesta obtendremos:
-
-![images/Untitled%208.png](images/Untitled%208.png)
 
 ### Finalizando una tarea
 
 Para finalizar una nueva tarea, hacemos una petición PUT, con el título de la tarea y marcándola como finalizada en el body de la petición y el token en la cabecera
 
-![images/Untitled%209.png](images/Untitled%209.png)
-
-![images/Untitled%2010.png](images/Untitled%2010.png)
-
-Como respuesta tendremos:
-
-![images/Untitled%2011.png](images/Untitled%2011.png)
 
 ### Borrando una tarea
 
-Para borrar una tarea, hacemos una petición DELETE, con el token en la cabecera y el título de la tarea en el body de la petición:
+Para borrar una tarea, hacemos una petición DELETE, con el token en la cabecera y el título de la tarea en el body de la petición.
 
-![images/Untitled%2012.png](images/Untitled%2012.png)
-
-![images/Untitled%2013.png](images/Untitled%2013.png)
-
-Como respuesta tendremos:
-
-![images/Untitled%2014.png](images/Untitled%2014.png)
